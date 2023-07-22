@@ -8,6 +8,8 @@ GyverOLED<SSD1306_128x64, OLED_NO_BUFFER> oled;
 DHT dht(DHTPIN, DHT11);
 
 void setup() {
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
   dht.begin();
   oled.init();
   Serial.begin(9600);
