@@ -1,7 +1,7 @@
 // Метеостанция
 // OLED SCL - A5
 // OLED SDA - A4
-#define DHTPIN A0
+#define DHTPIN A3
 #include "DHT.h"
 #include <GyverOLED.h>
 GyverOLED<SSD1306_128x64, OLED_NO_BUFFER> oled;
