@@ -7,7 +7,7 @@
 ## Используемые модули:
 * OLED SSD1306 128x64
 * DHT11 / DHT22
-* 
+
 ## Используемые библиотеки:
 * [GyverOLED](https://github.com/GyverLibs/GyverOLED)
 * [DHT sensor library](https://github.com/adafruit/DHT-sensor-library)
