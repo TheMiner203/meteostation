@@ -17,7 +17,12 @@ void setup() {
   dht.begin();         // Запустить датчик DHT
   oled.init();         // Запустить OLED экран
   Serial.begin(9600);  // Открыть порт на скорости 9600
-  start();             // Очистить экран и вывести надписи
+  oled.setScale(3);
+  oled.print("Метео -");
+  oled.setCursor(0, 4);
+  oled.print("станция");
+  delay(1000);
+  start();  // Очистить экран и вывести надписи
 }
 
 void loop() {
@@ -46,16 +51,16 @@ void loop() {
     isError = true;
   }
   if (isError == false) {
-    Serial.print("Temperature:");
-    Serial.println(temperature, 1);
-    Serial.print("Humidity:");
-    Serial.println(humidity, 1);
     oled.setCursorXY(60, 0);
     oled.print(temperature, 1);
     oled.print("C");
     oled.setCursorXY(60, 40);
     oled.print(humidity, 1);
     oled.print("%");
+    Serial.print("Temperature:");
+    Serial.println(temperature, 1);
+    Serial.print("Humidity:");
+    Serial.println(humidity, 1);
     delay(2000);
   }
 }
